@@ -1,7 +1,12 @@
 body {
-  padding-top: 50px;
+  padding-top: 70px;
 }
-.chart-wrapper {
-  padding: 40px 15px;
-  text-align: center;
+main {
+  padding: 20px 0;
+}
+.vehicles-group, .journeys-group, .signals-group {
+  display: none;
+}
+.form-group .col-md-offset-4 {
+  padding-top: 1em;
 }

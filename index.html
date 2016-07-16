@@ -29,23 +29,75 @@
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-          <a class="navbar-brand" href="#">JLR API Demo</a>
+          <a class="navbar-brand" href="#">JLR Developer Challenge API Demo</a>
         </div>
       </div>
     </nav>
 
-    <div class="container">
+    <main class="container">
 
-      <div class="chart-wrapper">
-        <h2>Graph</h2>
+      <form class="form-horizontal col-md-4">
+        <fieldset>
+
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="request">API Key</label>
+          <div class="col-md-8">
+          <input id="request" name="request" type="text" placeholder="" class="form-control input-md">
+          </div>
+          <div class="col-md-8 col-md-offset-4">
+            <button type="button" id="list-vehicles" name="list-vehicles" class="btn btn-primary col-xs-12">List Vehicles</button>
+          </div>
+        </div>
+
+        <!-- Select Basic -->
+        <div class="form-group vehicles-group">
+          <label class="col-md-4 control-label" for="vin">Select Vehicle</label>
+          <div class="col-md-8">
+            <select id="vin" name="vin" class="form-control">
+              <option value="">-- Select One --</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Select Basic -->
+        <div class="form-group journeys-group">
+          <label class="col-md-4 control-label" for="jid">Select Journey</label>
+          <div class="col-md-8">
+            <select id="jid" name="jid" class="form-control">
+              <option value="">-- Select One --</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Select Multiple -->
+        <div class="form-group signals-group">
+          <label class="col-md-4 control-label" for="signals">Select Signal(s)</label>
+          <div class="col-md-8">
+            <select id="signals" name="signals" class="form-control">
+              <option value="">-- Select One --</option>
+            </select>
+          </div>
+          <div class="col-md-8 col-md-offset-4">
+            <button type="button" id="plot-data" name="plot-data" class="btn btn-primary col-xs-12">Plot Data</button>
+          </div>
+        </div>
+
+        </fieldset>
+      </form>
+
+      <hr class="visible-xs visible-sm">
+
+      <div class="col-md-8" id="chart-wrapper">
         <div id="chart"></div>
       </div>
 
-    </div><!-- /.container -->
+    </main><!-- /.container -->
 
 
     <!-- JS
     ================================================== -->
+    <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="https://d3js.org/d3.v3.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
