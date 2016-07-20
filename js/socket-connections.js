@@ -14,7 +14,7 @@ $( "#stream-data" ).click(function() {
   if (signals === "") {return;}
   var auth_key = $('#request').val();
   var jid = $('#jid').val();
-  var query = "&sampling_rate=1000&request=" + auth_key + "&jid=" + jid + "&signals=" + signals;
+  var query = "request=" + auth_key + "&jid=" + jid + "&signals=" + signals;
   var host = "https://www.jlrdevchallenge.com/";
   client = io.connect(host, {query: query, path: '/socket_api/v1'});
   client.once( "connect", function () {
