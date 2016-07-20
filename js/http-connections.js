@@ -2,6 +2,7 @@
 // and display them in a HTML select box.
 $( "#list-vehicles" ).click(function() {
   var auth_key = $('#request').val();
+  $("#vin option[value!='']").remove();
   var url = "https://www.jlrdevchallenge.com/api/v1/get_vehicles/?request=" + auth_key;
   $.getJSON(url, function( data ) {
     $.each(data, function (index, packet) {
