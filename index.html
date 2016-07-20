@@ -70,7 +70,7 @@
           </div>
         </div>
 
-        <!-- Select Multiple -->
+        <!-- Select Basic -->
         <div class="form-group signals-group">
           <label class="col-md-4 control-label" for="signals">Select Signal(s)</label>
           <div class="col-md-8">
@@ -80,6 +80,12 @@
           </div>
           <div class="col-md-8 col-md-offset-4">
             <button type="button" id="plot-data" name="plot-data" class="btn btn-primary col-xs-12">Plot Data</button>
+          </div>
+          <div class="col-md-8 col-md-offset-4">
+            <button type="button" id="stream-data" name="stream-data" class="btn btn-success col-xs-12">Stream Data</button>
+          </div>
+          <div class="col-md-8 col-md-offset-4">
+            <button type="button" id="stop-stream" name="stop-stream" class="btn btn-danger col-xs-12">Stop Stream</button>
           </div>
         </div>
 
@@ -102,7 +108,8 @@
     <script src="https://d3js.org/d3.v3.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/c3.min.js"></script>
-    <script src="js/jlr.js"></script>
+    <script src="js/http-connections.js"></script>
+    <script src="js/socket-connections.js"></script>
 
   </body>
 </html>

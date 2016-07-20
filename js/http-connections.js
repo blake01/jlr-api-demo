@@ -1,5 +1,5 @@
-// !@qwaszx!
-
+// When 'list-vehicles' is clicked, get all vehicles from the API
+// and display them in a HTML select box.
 $( "#list-vehicles" ).click(function() {
   var auth_key = $('#request').val();
   var url = "https://www.jlrdevchallenge.com/api/v1/get_vehicles/?request=" + auth_key;
@@ -17,6 +17,8 @@ $( "#list-vehicles" ).click(function() {
 });
 
 
+// When a vin is selected, get all journeys for that VIN from the API
+// and display them in a HTML select box
 $( "#vin" ).on('change', function() {
   var vin = $('#vin').val();
   if (vin === "") {return;}
@@ -38,6 +40,8 @@ $( "#vin" ).on('change', function() {
 });
 
 
+// When a journey is selected, get all signals for that journey from the API
+// and display them in a HTML select box
 $( "#jid" ).on('change', function() {
   var jid = $('#jid').val();
   if (jid === "") {return;}
@@ -62,6 +66,8 @@ $( "#jid" ).on('change', function() {
 });
 
 
+// When plot-data is clicked, retrieve signal time history from the API and
+// plot it on a graph.
 $( "#plot-data" ).click(function() {
   var signals = $('#signals').val();
   if (signals === "") {return;}
@@ -91,6 +97,9 @@ $( "#plot-data" ).click(function() {
                 format: '%Y-%m-%d %H:%M:%S'
             }
           }
+        },
+        point: {
+          show: false
         }
     });
   });
